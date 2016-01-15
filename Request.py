@@ -15,6 +15,10 @@ from time import gmtime, strftime
 import random
 from keys import access_token_key, access_token_secret, consumer_key, consumer_secret
 
+
+if len(access_token_key) == 0 or len(access_token_secret) == 0 or len(consumer_key) == 0 or len(consumer_secret) == 0:
+	raise KeyError("Did you forget to add your keys to keys.py?")
+
 oauth_token    = oauth.Token(key=access_token_key, secret=access_token_secret)
 oauth_consumer = oauth.Consumer(key=consumer_key, secret=consumer_secret)
 
