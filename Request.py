@@ -5,8 +5,6 @@ import json
 import sys
 import oauth2 as oauth
 import urllib2 as urllib
-import time
-import codecs
 # pickle is a cool package to serialize python objects. It's really helpful
 # 	because we want to store our data in case we get rate limited from twitter
 # 	or in case we have an error with one of our requests 
@@ -156,5 +154,4 @@ if __name__ == "__main__":
 	pickle_output = "results.pickle"
 
 	friends = get_friends(seed, pickle_output)
-
-
+	print friends
